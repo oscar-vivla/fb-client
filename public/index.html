@@ -85,7 +85,8 @@ limitations under the License.
     <script src="/__/firebase/9.22.1/firebase-app-compat.js"></script>
     <script src="/__/firebase/9.22.1/firebase-messaging-compat.js"></script>
     <script src="/__/firebase/init.js"></script>
-    <script src="../services/token-services.js"></script>
+    <script src="./services/token-services.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
 
     <script>
       // Retrieve Firebase Messaging object.
@@ -150,7 +151,6 @@ limitations under the License.
           console.log("Sending token to server...");
           // TODO(developer): Send the current token to your server.
           sendTokenToFirebase(currentToken);
-          sendTokenToFirebase('sdfdfsa');
           setTokenSentToServer(true);
         } else {
           console.log(
@@ -185,7 +185,6 @@ limitations under the License.
             // TODO(developer): Retrieve a registration token for use with FCM.
             // In many cases once an app has been granted notification permission,
             // it should update its UI reflecting this.
-            sendTokenToFirebase('hola que tal ??');
             resetUI();
           } else {
             console.log("Unable to get permission to notify.");
